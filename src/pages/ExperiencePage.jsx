@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import Section from '../components/Section';
 
 // Data from your resume
-// ... (your experience data remains the same)
 const workExperience = [
   {
     company: 'iSteer',
@@ -35,6 +34,14 @@ const leadershipExperience = [
       'Collaborated with the Student Association Head to conduct 3+ campus fundraisers, raising 100% of required funds ahead of schedule.'
     ]
   }
+];
+
+// Your timeline data
+const timelineEvents = [
+  { year: 2022, text: "Started to code." },
+  { year: 2023, text: "Started exploring fullstack." },
+  { year: 2024, text: "Played with LLMs - integrating it in my apps." },
+  { year: 2025, text: "Building applications (MovieSocial)." },
 ];
 
 
@@ -97,6 +104,46 @@ const ExperiencePage = () => {
       variants={pageVariants}
       transition={pageTransition}
     >
+      {/* --- Highlights Timeline Section (Horizontal) --- */}
+      <motion.div
+        className="pt-16 pb-16" 
+        initial={{ opacity: 0, y: 75 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <h2 className="text-3xl font-bold text-center mb-16 text-green-400">
+          Highlights
+        </h2>
+        {/* Horizontal Timeline Container */}
+        <div className="relative max-w-4xl mx-auto px-4">
+          {/* The Horizontal Line */}
+          {/* Positioned to be in the middle of the "dot" */}
+          <div className="absolute left-10 right-10 top-11 h-1 bg-gray-700 rounded-full" />
+          
+          {/* Timeline Items Container */}
+          <div className="relative flex justify-between">
+            {timelineEvents.map((event, index) => (
+              <motion.div 
+                key={index} 
+                className="relative flex flex-col items-center w-48" // w-48 for spacing
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                {/* Year above the dot */}
+                <h3 className="text-2xl font-semibold text-white mb-2">{event.year}</h3>
+                {/* Timeline dot (sits on top of the line) */}
+                <div className="w-5 h-5 bg-green-500 rounded-full border-4 border-gray-900 z-10 mb-2" />
+                {/* Text below the dot */}
+                <p className="text-lg text-gray-400 text-center">{event.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
       <Section>
         <h1 className="text-4xl font-bold text-center mb-12 text-white">
           Work Experience
