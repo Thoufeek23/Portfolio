@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
 import TechStack from '../sections/TechStack';
-import Projects from '../sections/Projects'; // This is your "Featured Projects"
+import StartupSection from '../sections/StartupSection'; 
+import Contact from '../sections/Contact'; // <-- 1. Import Contact
 
 // Animation settings for page transitions
 const pageVariants = {
@@ -29,7 +30,8 @@ const Home = () => {
       <Hero />
       <About />
       <TechStack />
-      <Projects /> {/* You might want to rename this to 'FeaturedProjects' */}
+      <StartupSection /> 
+      <Contact /> {/* <-- 2. Add Contact section here */}
     </motion.div>
   );
 };

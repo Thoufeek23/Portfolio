@@ -2,7 +2,8 @@ import Section from '../components/Section';
 
 const Contact = () => {
   return (
-    <Section>
+    // Pass the id "contact" to the Section component
+    <Section id="contact"> 
       <div className="text-center">
         <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
         <p className="text-gray-300 max-w-lg mx-auto mb-8 text-lg">
