@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Section from '../components/Section';
 
 // Data from your resume
+// ... (your experience data remains the same)
 const workExperience = [
   {
     company: 'iSteer',
@@ -36,6 +37,7 @@ const leadershipExperience = [
   }
 ];
 
+
 // Re-use the same page transition animation settings
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -51,7 +53,11 @@ const pageTransition = {
 
 // A reusable component for timeline items
 const ExperienceItem = ({ role, company, date, description }) => (
-  <div className="mb-8 p-6 bg-gray-800 rounded-lg shadow-lg transition-transform transform hover:scale-[1.02]">
+  <motion.div
+    className="mb-8 p-6 bg-gray-800 rounded-lg shadow-lg"
+    // Remove Tailwind transitions and use Framer Motion
+    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+  >
     <div className="flex justify-between items-center mb-2">
       <h3 className="text-2xl font-bold text-green-400">{role}</h3>
       <span className="text-sm font-mono text-gray-400">{date}</span>
@@ -62,8 +68,25 @@ const ExperienceItem = ({ role, company, date, description }) => (
         <li key={index}>{item}</li>
       ))}
     </ul>
-  </div>
+  </motion.div>
 );
+
+// Stagger variants for the experience list
+const listVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0 },
+};
+
 
 const ExperiencePage = () => {
   return (
@@ -78,22 +101,36 @@ const ExperiencePage = () => {
         <h1 className="text-4xl font-bold text-center mb-12 text-white">
           Work Experience
         </h1>
-        <div className="relative">
+        <motion.div
+          className="relative"
+          variants={listVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {workExperience.map((job, index) => (
-            <ExperienceItem key={index} {...job} />
+            <motion.div key={index} variants={itemVariants}>
+              <ExperienceItem {...job} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Section>
       
       <Section>
         <h1 className="text-4xl font-bold text-center mb-12 text-white">
           Leadership & Activities
         </h1>
-        <div className="relative">
+        <motion.div
+          className="relative"
+          variants={listVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {leadershipExperience.map((job, index) => (
-            <ExperienceItem key={index} {...job} />
+            <motion.div key={index} variants={itemVariants}>
+              <ExperienceItem {...job} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Section>
     </motion.div>
   );

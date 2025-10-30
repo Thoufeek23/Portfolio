@@ -1,13 +1,19 @@
 import { Link } from 'react-router-dom';
-// Imports are now active since 'react-icons' is in package.json 
-import { FaGithub, FaLinkedin } from 'react-icons/fa'; 
+import { motion } from 'framer-motion'; // Import motion
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 z-50 bg-gray-900/70 backdrop-blur-md">
+    <motion.header
+      className="sticky top-0 z-50 bg-gray-900/70 backdrop-blur-md"
+      // Add animation variants
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
       <nav className="container mx-auto max-w-5xl px-4 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-green-400 hover:text-green-300 transition-colors">
-          MTA
+          Mohamed Thoufeek Ali
         </Link>
         
         <div className="flex items-center gap-6">
@@ -25,15 +31,29 @@ const Navbar = () => {
           <span className="w-px h-6 bg-gray-700"></span>
 
           {/* External links using icons */}
-          <a href="https://github.com/Thoufeek23" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition-colors" aria-label="GitHub Profile">
+          <motion.a
+            href="https://github.com/Thoufeek23"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-green-400 transition-colors"
+            aria-label="GitHub Profile"
+            whileHover={{ scale: 1.2, y: -2 }} // Add hover effect
+          >
             <FaGithub size={24} />
-          </a>
-          <a href="https://linkedin.com/in/mohamedta/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition-colors" aria-label="LinkedIn Profile">
+          </motion.a>
+          <motion.a
+            href="https://linkedin.com/in/mohamedta/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-green-400 transition-colors"
+            aria-label="LinkedIn Profile"
+            whileHover={{ scale: 1.2, y: -2 }} // Add hover effect
+          >
             <FaLinkedin size={24} />
-          </a>
+          </motion.a>
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 };
 

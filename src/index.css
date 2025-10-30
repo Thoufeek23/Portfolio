@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* This keyframe animates the width from 0 to 100% */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* This keyframe animates the cursor's border color */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #34d399; } /* This is Tailwind's green-400 */
+}
+
+/* Set cursor to visible when the short 'show' animation runs */
+@keyframes show {
+  to { border-color: #34d399; }
+}
+
+/* Add this keyframe to fade in the subtitle */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
