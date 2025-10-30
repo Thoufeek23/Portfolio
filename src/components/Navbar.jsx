@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'; // Import motion
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { SiX } from 'react-icons/si';
 
 const Navbar = () => {
   return (
@@ -50,6 +51,30 @@ const Navbar = () => {
             whileHover={{ scale: 1.2, y: -2 }} // Add hover effect
           >
             <FaLinkedin size={24} />
+          </motion.a>
+
+          {/* Instagram */}
+          <motion.a
+            href="https://www.instagram.com/thoufeek.mem/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-green-400 transition-colors"
+            aria-label="Instagram Profile"
+            whileHover={{ scale: 1.2, y: -2 }}
+          >
+            <FaInstagram size={20} />
+          </motion.a>
+
+          {/* X (Twitter) */}
+          <motion.a
+            href="https://x.com/Thoufeekhere"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-green-400 transition-colors"
+            aria-label="X Profile"
+            whileHover={{ scale: 1.2, y: -2 }}
+          >
+            <SiX size={20} />
           </motion.a>
         </div>
       </nav>
