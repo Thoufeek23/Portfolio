@@ -1,11 +1,11 @@
-import { useState } from 'react'; // <-- 1. Import useState
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram, FaBars, FaTimes } from 'react-icons/fa'; // <-- 2. Import menu icons
+import { FaGithub, FaLinkedin, FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
 import { SiX } from 'react-icons/si';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // <-- 3. Add state for mobile menu
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <motion.header
@@ -35,6 +35,15 @@ const Navbar = () => {
           <Link to="/experience" className="text-lg text-gray-300 hover:text-green-400 transition-colors">
             Experience
           </Link>
+          {/* --- ADDED THIS LINK --- */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg text-gray-300 hover:text-green-400 transition-colors"
+          >
+            Resume
+          </a>
           
           <span className="w-px h-6 bg-gray-700"></span>
 
@@ -120,6 +129,16 @@ const Navbar = () => {
               >
                 Experience
               </Link>
+              {/* --- ADDED THIS LINK --- */}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg text-gray-300 hover:text-green-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Resume
+              </a>
               
               <span className="w-1/2 h-px bg-gray-700 my-2"></span>
 

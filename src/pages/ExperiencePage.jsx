@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Section from '../components/Section';
+import { FiDownload } from 'react-icons/fi'; // <-- Icon is already imported
 
 // Data from your resume
 const workExperience = [
@@ -104,7 +105,9 @@ const ExperiencePage = () => {
       variants={pageVariants}
       transition={pageTransition}
     >
+      
       {/* --- Highlights Timeline Section (Horizontal) --- */}
+      {/* --- BUTTON WAS REMOVED FROM HERE --- */}
       <motion.div
         className="pt-16 pb-16" 
         initial={{ opacity: 0, y: 75 }}
@@ -142,6 +145,26 @@ const ExperiencePage = () => {
             ))}
           </div>
         </div>
+
+        {/* --- BUTTON MOVED HERE --- */}
+        <motion.div 
+          className="text-center pt-16" // Added padding-top
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          <motion.a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-6 py-3 bg-green-500 text-gray-900 font-bold rounded-lg hover:bg-green-400 transition-colors text-base md:text-lg shadow-lg"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FiDownload size={20} />
+            View Full Resume
+          </motion.a>
+        </motion.div>
       </motion.div>
 
       <Section>

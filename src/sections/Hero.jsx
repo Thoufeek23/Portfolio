@@ -8,7 +8,7 @@ const titleSteps = title.length;
 const titleCharDuration = 0.1;
 const titleDuration = titleSteps * titleCharDuration;
 
-const subtitle = "Full-Stack Developer | Building MovieSocial | Learnig business";
+const subtitle = "Full-Stack Developer | Building MovieSocial | Learning business";
 // Split subtitle into words for staggering
 const subtitleWords = subtitle.split(" ");
 

@@ -1,20 +1,27 @@
 import { motion } from 'framer-motion';
 import Section from '../components/Section';
-import { FiExternalLink } from 'react-icons/fi';
-import { MdOutlineRateReview } from 'react-icons/md';
-import { BsCalendarFill } from 'react-icons/bs';
-import { AiOutlineCode } from 'react-icons/ai';
+import { MdOutlineRateReview } from "react-icons/md";
+import { FiExternalLink } from "react-icons/fi";
+import { BsBookmarkFill } from "react-icons/bs";
+import { FaSearch, FaUserCircle, FaGlobeAmericas, FaComments } from "react-icons/fa";
+import { FiLogIn } from "react-icons/fi";
+import { GoVerified } from "react-icons/go";
 
 // Data for the MovieSocial project
 const movieSocialData = {
   logo: "/MS_logo.png", // The logo file from your 'public' folder
   title: "Cinephile's Paradise",
   features: [
-    { icon: <MdOutlineRateReview />, text: "Movie Reviews & Ratings" },
-    { icon: <BsCalendarFill />, text: "Engage in 'Moddle' Puzzle" },
-    { icon: <AiOutlineCode />, text: "Powered by React, Node.js, Express, MongoDB" },
+    { icon: <FiLogIn />, text: "Become a Movie Insider" }, // (Login/Join)
+    { icon: <FaSearch />, text: "The Ultimate Movie Finder" }, // (Search)
+    { icon: <MdOutlineRateReview />, text: "Be the Critic" }, // (Write reviews)
+    { icon: <BsBookmarkFill />, text: "Curate Your Film Life" }, // (Watchlist/Save)
+    { icon: <FaUserCircle />, text: "Build Your Film Persona" }, // (Profile)
+    { icon: <FaGlobeAmericas />, text: "The Global Reel" }, // (Global feed)
+    { icon: <FaComments />, text: "Engage in discussions" }, // (Comments/Forum)
+    { icon: <GoVerified />, text: "Connect with cine celebrities" },
   ],
-  live: "https://moviesocial.onrender.com/", 
+  live: "https://mail.google.com/mail/u/0/?fs=1&to=thoufeek2306@gmail.com&tf=cm", 
 };
 
 // Animation variants for the container
@@ -108,12 +115,12 @@ const StartupSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 bg-green-500 text-gray-900 text-base md:text-lg font-bold rounded-full shadow-lg transition-all duration-300 transform"
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(52, 211, 153, 0.25)" }}
+              whileHover={{ scale: 1.05}}
               whileTap={{ scale: 0.98 }}
               aria-label="Live Prototype for MovieSocial"
             >
               <FiExternalLink size={20} />
-              View Live Prototype
+              Connect with me to view the prototype!
             </motion.a>
           </motion.div>
           
