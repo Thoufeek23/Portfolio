@@ -52,7 +52,7 @@ const StartupSection = () => {
       <div className="text-center">
         {/* Your new heading */}
         <motion.h2 
-          className="text-3xl font-bold text-center mb-10 text-white"
+          className="text-2xl md:text-3xl font-bold text-center mb-10 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -63,7 +63,7 @@ const StartupSection = () => {
 
         {/* This container mimics the dark card from your screenshot */}
         <motion.div
-          className="bg-gray-800 rounded-2xl shadow-2xl max-w-4xl mx-auto p-8 md:p-16"
+          className="bg-gray-800 rounded-2xl shadow-2xl max-w-4xl mx-auto p-6 md:p-16"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -73,13 +73,13 @@ const StartupSection = () => {
           <motion.img
             src={logo}
             alt="MovieSocial Logo"
-            className="w-80 md:w-96 mx-auto mb-6"
+            className="w-72 md:w-96 mx-auto mb-6"
             variants={itemVariants}
           />
 
           {/* 2. Tagline */}
           <motion.h3
-            className="text-4xl md:text-5xl font-extrabold text-green-400 mb-10 tracking-tight"
+            className="text-3xl md:text-5xl font-extrabold text-green-400 mb-10 tracking-tight"
             variants={itemVariants}
           >
             {title}
@@ -93,7 +93,7 @@ const StartupSection = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 bg-gray-700/60 rounded-full px-6 py-3 text-sm md:text-base font-medium text-gray-200"
+                className="flex items-center gap-3 bg-gray-700/60 rounded-full px-5 py-2 md:px-6 md:py-3 text-sm md:text-base font-medium text-gray-200"
               >
                 <span className="text-green-400">{feature.icon}</span>
                 <span>{feature.text}</span>
@@ -107,12 +107,12 @@ const StartupSection = () => {
               href={live}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-green-500 text-gray-900 text-lg font-bold rounded-full shadow-lg transition-all duration-300 transform"
+              className="inline-flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 bg-green-500 text-gray-900 text-base md:text-lg font-bold rounded-full shadow-lg transition-all duration-300 transform"
               whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(52, 211, 153, 0.25)" }}
               whileTap={{ scale: 0.98 }}
               aria-label="Live Prototype for MovieSocial"
             >
-              <FiExternalLink size={22} />
+              <FiExternalLink size={20} />
               View Live Prototype
             </motion.a>
           </motion.div>

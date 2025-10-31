@@ -8,10 +8,11 @@ const ProjectCarousel = ({ projects }) => {
         className="w-full overflow-x-auto no-scrollbar"
       >
         {/* This is the inner container that holds the cards */}
-        <div className="flex gap-6 items-stretch"> {/* <-- Added items-stretch */}
+        <div className="flex gap-6 items-stretch px-2 sm:px-0"> {/* <-- Added items-stretch and a little horizontal padding for mobile */}
           {projects.map((project, index) => (
             // The 'flex-shrink-0' is important to keep the cards from shrinking
-            <div key={index} className="w-96 flex-shrink-0">
+            // Responsive width added here:
+            <div key={index} className="w-72 sm:w-80 md:w-96 flex-shrink-0">
               <ProjectCard 
                 title={project.title}
                 description={project.description}

@@ -6,13 +6,13 @@ const Contact = () => {
     <Section id="contact">
       <div className="text-center">
         <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-        <p className="text-gray-300 max-w-lg mx-auto mb-8 text-lg">
+        <p className="text-gray-300 max-w-lg mx-auto mb-8 text-base md:text-lg">
           I'm always open to discussing new projects, creative ideas, or opportunities.
           Feel free to reach out to me!
         </p>
         <a
           href="https://mail.google.com/mail/u/0/?fs=1&to=thoufeek2306@gmail.com&tf=cm"
-          className="px-8 py-4 bg-green-500 text-gray-900 font-bold rounded-lg hover:bg-green-400 transition-colors text-lg"
+          className="px-6 py-3 md:px-8 md:py-4 bg-green-500 text-gray-900 font-bold rounded-lg hover:bg-green-400 transition-colors text-base md:text-lg"
         >
           Say Hello
         </a>

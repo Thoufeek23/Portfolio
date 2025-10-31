@@ -84,7 +84,8 @@ const Hero = () => {
         style={{ minHeight: '2.5rem' /* smaller minHeight to reduce vertical space */ }}
       >
         <h1 
-          className="text-5xl font-extrabold text-white inline-block overflow-hidden whitespace-nowrap border-r-4 border-r-green-400 align-middle"
+          // Responsive text size added
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white inline-block overflow-hidden whitespace-nowrap border-r-4 border-r-green-400 align-middle"
           style={{
             width: "0", 
             animation: 
@@ -99,7 +100,8 @@ const Hero = () => {
       {/* Subtitle container */}
       <motion.p 
         variants={subtitleContainerVariant} 
-        className="text-lg text-gray-300 max-w-2xl mx-auto mb-6"
+        // Responsive text size added
+        className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-6"
         style={{ minHeight: '3rem' /* smaller minHeight to reduce vertical space */ }}
       >
         {subtitleWords.map((word, index) => (
@@ -115,12 +117,13 @@ const Hero = () => {
 
       {/* Button div */}
       <motion.div
-        className="flex justify-center items-center gap-4"
+        // Stack buttons on mobile, row on sm+
+        className="flex flex-col sm:flex-row justify-center items-center gap-4"
         variants={heroItemVariants}
       >
         <MotionLink
           to="/projects"
-          className="px-6 py-3 bg-green-500 text-gray-900 rounded font-semibold"
+          className="px-6 py-3 bg-green-500 text-gray-900 rounded font-semibold w-full sm:w-auto" // Make button full-width on mobile
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -129,7 +132,7 @@ const Hero = () => {
         
         <motion.a
           href="#contact" 
-          className="px-6 py-3 border border-gray-600 rounded text-gray-200"
+          className="px-6 py-3 border border-gray-600 rounded text-gray-200 w-full sm:w-auto" // Make button full-width on mobile
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
