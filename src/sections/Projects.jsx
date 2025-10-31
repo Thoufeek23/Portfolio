@@ -1,5 +1,6 @@
+// src/sections/Projects.jsx
 import Section from '../components/Section';
-import ProjectCard from '../components/ProjectCard';
+import ProjectCarousel from '../components/ProjectCarousel'; // <-- 1. Import new component
 
 // Your project data, pulled from your resume
 const projects = [
@@ -33,11 +34,8 @@ const Projects = () => {
       <h2 className="text-3xl font-bold text-center mb-12">
         My Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
-      </div>
+      {/* 2. Replace the grid with the carousel component */}
+      <ProjectCarousel projects={projects} />
     </Section>
   );
 };

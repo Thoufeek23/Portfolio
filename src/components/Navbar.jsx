@@ -23,7 +23,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link to="/projects" className="text-lg text-gray-300 hover:text-green-400 transition-colors">
-            Projects
+            Milestones
           </Link>
           <Link to="/experience" className="text-lg text-gray-300 hover:text-green-400 transition-colors">
             Experience

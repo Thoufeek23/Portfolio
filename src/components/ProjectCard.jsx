@@ -1,3 +1,4 @@
+// src/components/ProjectCard.jsx
 import { motion } from 'framer-motion';
 // Imports are now active since 'react-icons' is in package.json 
 import { FaGithub } from 'react-icons/fa';
@@ -6,7 +7,7 @@ import { FiExternalLink } from 'react-icons/fi';
 const ProjectCard = ({ title, description, tech, image, github, live }) => {
   return (
     <motion.div
-      className="bg-gray-800 rounded-lg overflow-hidden shadow-xl flex flex-col"
+      className="bg-gray-800 rounded-lg overflow-hidden shadow-xl flex flex-col h-full" // <-- Added h-full
       whileHover={{ scale: 1.03, y: -5 }}
       transition={{ duration: 0.2 }}
     >

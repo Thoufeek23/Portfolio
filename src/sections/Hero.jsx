@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import FractalTree from '../components/FractalTree/FractalTree'; // 1. Import your new component
 
 // --- Define your text and timings here ---
-const title = "Hi I am Mohamed Thoufeek Ali";
+const title = "Hi, I am Mohamed Thoufeek Ali";
 const titleSteps = title.length;
 const titleCharDuration = 0.1;
 const titleDuration = titleSteps * titleCharDuration;
