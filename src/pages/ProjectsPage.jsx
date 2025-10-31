@@ -11,7 +11,7 @@ const projects = [
     description: "An AI-powered chatbot built for real-time, context-aware support using Gemini API, LangChain, and FAISS. Indexed over 100 company web pages to enable instant, accurate responses within two seconds. Developed a clean chat interface and integrated intelligent user intent handling for a seamless experience.",
     tech: ["Gemini API", "LangChain", "FAISS", "Google Embeddings", "HTML/CSS/JS"],
     image: "/isteerchatbot.png",
-    github: "https://github.com/iSteer-chatbot",
+    github: "https://github.com/Thoufeek23/iSteer-chatbot",
     live: "#",
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     description: "A high-speed C++ search engine enabling lightning-fast celebrity and person lookups in under 10ms. Implemented optimized data structures like heaps and hash tables for efficient search and retrieval. Built a modular architecture with a custom Makefile ensuring clean, stable builds.",
     tech: ["C++", "Data Structures", "Makefile", "Algorithms"],
     image: "/searchengine.png",
-    github: "https://github.com/Search_Engine",
+    github: "https://github.com/Thoufeek23/Search_Engine",
     live: "#",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     description: "A genealogy analysis tool that identifies family relationships and shortest connection paths across large family trees. Used Dijkstra’s algorithm to achieve quick, accurate results for 100+ member networks. Validated through user testing to ensure smooth and relevant query handling.",
     tech: ["C++", "Dijkstra's Algorithm", "Data Structures"],
     image: "/Rel_find_logo.png",
-    github: "https.github.com/Relationship_Finder",
+    github: "https.github.com/Thoufeek23/Relationship_Finder",
     live: "#",
   },
 ];
