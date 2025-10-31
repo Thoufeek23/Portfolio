@@ -8,7 +8,7 @@ import CertificateBrowser from '../components/CertificateBrowser'; // <-- 1. Imp
 const projects = [
   {
     title: "iSteer Chat Assistant",
-    description: "An AI-powered chatbot using Gemini API and RAG to provide real-time, context-aware support from 100+ company web pages.",
+    description: "An AI-powered chatbot built for real-time, context-aware support using Gemini API, LangChain, and FAISS. Indexed over 100 company web pages to enable instant, accurate responses within two seconds. Developed a clean chat interface and integrated intelligent user intent handling for a seamless experience.",
     tech: ["Gemini API", "LangChain", "FAISS", "Google Embeddings", "HTML/CSS/JS"],
     image: "/isteerchatbot.png",
     github: "https://github.com/iSteer-chatbot",
@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: "C++ Search Engine",
-    description: "A high-speed celebrity and person lookup tool built in C++, optimized with max heap, BST, and hashtable data structures.",
+    description: "A high-speed C++ search engine enabling lightning-fast celebrity and person lookups in under 10ms. Implemented optimized data structures like heaps and hash tables for efficient search and retrieval. Built a modular architecture with a custom Makefile ensuring clean, stable builds.",
     tech: ["C++", "Data Structures", "Makefile", "Algorithms"],
     image: "/searchengine.png",
     github: "https://github.com/Search_Engine",
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     title: "Relationship Finder",
-    description: "The \"Relationship Finder\" is a Python project using weighted graphs and Dijkstra's algorithm to map and analyze relationships. It finds the strongest connection paths between individuals and calculates overall relationship scores. Perfect for understanding family, social, or organizational networks, the project provides clear insights into complex interconnections, represented by its interconnected logo.",
+    description: "A genealogy analysis tool that identifies family relationships and shortest connection paths across large family trees. Used Dijkstra’s algorithm to achieve quick, accurate results for 100+ member networks. Validated through user testing to ensure smooth and relevant query handling.",
     tech: ["C++", "Dijkstra's Algorithm", "Data Structures"],
     image: "/Rel_find_logo.png",
     github: "https.github.com/Relationship_Finder",

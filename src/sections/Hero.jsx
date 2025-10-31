@@ -8,7 +8,7 @@ const titleSteps = title.length;
 const titleCharDuration = 0.1;
 const titleDuration = titleSteps * titleCharDuration;
 
-const subtitle = "I'm a computer science student building web apps and AI integrations. Welcome to my portfolio.";
+const subtitle = "Full-Stack Developer | Building MovieSocial | Learnig business";
 // Split subtitle into words for staggering
 const subtitleWords = subtitle.split(" ");
 
