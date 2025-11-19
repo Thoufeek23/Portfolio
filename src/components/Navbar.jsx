@@ -37,7 +37,7 @@ const Navbar = () => {
           </Link>
           {/* --- ADDED THIS LINK --- */}
           <a
-            href="/resume.pdf"
+            href="/Mohamed_Thoufeek_Ali.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg text-gray-300 hover:text-green-400 transition-colors"
@@ -131,7 +131,7 @@ const Navbar = () => {
               </Link>
               {/* --- ADDED THIS LINK --- */}
               <a
-                href="/resume.pdf"
+                href="/Mohamed_Thoufeek_Ali.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg text-gray-300 hover:text-green-400 transition-colors"

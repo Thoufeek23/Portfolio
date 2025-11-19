@@ -25,6 +25,14 @@ const certificateData = {
       image: 'play_it_safe.png', // <-- Update this path
       url: 'https://www.coursera.org/account/accomplishments/certificate/9U4J6SAVQTJY' // <-- Update this link
     },
+    { 
+      id: 'g3', 
+      title: 'Connect and Protect: Networks and Network Security', 
+      issuer: 'Google (Coursera)', 
+      date: 'Nov 2025', 
+      image: 'NetworksandNetworkSecurity.png', // <-- Update this path
+      url: 'https://www.coursera.org/account/accomplishments/verify/5JEN3C6S1SII' // <-- Update this link
+    },
   ],
   workato: [
     { 
