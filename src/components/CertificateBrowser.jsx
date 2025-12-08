@@ -33,6 +33,14 @@ const certificateData = {
       image: 'NetworksandNetworkSecurity.png', // <-- Update this path
       url: 'https://www.coursera.org/account/accomplishments/verify/5JEN3C6S1SII' // <-- Update this link
     },
+    { 
+      id: 'g4', 
+      title: 'Tools of the Trade: Linux and SQL', 
+      issuer: 'Google (Coursera)', 
+      date: 'dec 2025', 
+      image: 'ToolsoftheTrade.png', // <-- Update this path
+      url: 'https://www.coursera.org/account/accomplishments/records/KBTRZ4VJMC01' // <-- Update this link
+    },
   ],
   workato: [
     { 
