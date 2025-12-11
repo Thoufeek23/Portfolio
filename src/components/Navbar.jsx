@@ -69,7 +69,7 @@ const Navbar = () => {
             <FaLinkedin size={24} />
           </motion.a>
           <motion.a
-            href="https://www.instagram.com/thoufeek.mem/"
+            href="https://www.instagram.com/thoufeek.23/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-green-400 transition-colors"
