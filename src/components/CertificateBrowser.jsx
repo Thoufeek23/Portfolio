@@ -41,6 +41,14 @@ const certificateData = {
       image: 'ToolsoftheTrade.png', // <-- Update this path
       url: 'https://www.coursera.org/account/accomplishments/records/KBTRZ4VJMC01' // <-- Update this link
     },
+    { 
+      id: 'g5', 
+      title: 'Assets, Threats, and Vulnerabilities', 
+      issuer: 'Google (Coursera)', 
+      date: 'dec 2025', 
+      image: 'ATV.png', // <-- Update this path
+      url: 'https://www.coursera.org/account/accomplishments/records/U0YTQ32G87CJ' // <-- Update this link
+    },
   ],
   workato: [
     { 
